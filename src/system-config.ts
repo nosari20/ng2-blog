@@ -9,10 +9,37 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  '@angular2-material/core': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'core.js'
+  },
+  '@angular2-material/card': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'card.js'
+  },
+  '@angular2-material/button': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'button.js'
+  },
+  '@angular2-material/icon': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'icon.js'
+  },
+  '@angular2-material/input': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'input.js'
+  },
+  // And so on...
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,6 +63,20 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/components/header',
+  'app/components/header/header-link',
+  'app/content/home',
+  'app/content/discover',
+  'app/content/tutorial',
+  'app/content/overview',
+  'app/content/contact',
+  'app/components/loader',
+  'app/components/header/top-header',
+  'app/components/header/header-top',
+  'app/components/footer',
+  'app/components/footer/footer-link',
+  'app/components/footer/footer-item',
+  'app/components/textarea',
   /** @cli-barrel */
 ];
 

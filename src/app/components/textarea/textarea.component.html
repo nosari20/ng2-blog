@@ -1,0 +1,6 @@
+<textarea required (focus)="focus()" (blur)="blur()" [(ngModel)]="data" (change)="changeValue(data)"></textarea>
+<label class="md-input-placeholder" [class.md-focused]="_focus">{{placeholder}}</label>
+<div class="md-input-underline">
+  <span class="md-input-ripple"></span>
+</div>
+

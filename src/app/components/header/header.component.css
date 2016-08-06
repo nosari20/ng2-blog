@@ -1,0 +1,23 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  background: #009688;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  min-height: 50px;
+}
+
+
+
+nav{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  overflow-x: auto;
+}
+
+nav::-webkit-scrollbar{
+  display: none;
+}
+
