@@ -17,7 +17,8 @@
     body{
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: rgb(242, 242, 242);
+      background: #2B2C2F;
+
     }
 
     /**
@@ -27,7 +28,7 @@
     /* Background */
 
     .md-background.md-primary, button.md-primary, .md-input-underline .md-input-ripple{
-      background: #212121 !important;
+      background: #2B2C2F !important;
     }
     .md-background.md-accent, button.md-accent, .md-input-underline .md-input-ripple.md-accent {
       background: #F44336 !important;
@@ -40,7 +41,7 @@
     /* Text color */
 
     .md-input-placeholder.md-focused{
-      color: #212121 !important;
+      color: #2B2C2F !important;
     }
 
     .md-input-placeholder.md-focused.md-accent{
@@ -50,9 +51,6 @@
     .md-input-placeholder.md-focused.md-warn{
       //TODO
     }
-
-
-
 
     /* Nav links' colors */
 
@@ -90,11 +88,17 @@
 
 
     /* Loader */
+
+    #window{
+      height: 100vh;
+      width: 100vw;
+      padding-top: 50vh;
+      box-sizing: border-box;
+    }
     #loader {
       position: relative;
       margin: 0px auto;
       width: 100px;
-      margin-top: 50px;
     }
     #loader:before {
       content: '';
@@ -195,13 +199,15 @@
 </head>
 <body>
   <app-root>
-    <div id="loader">
-        <svg class="circular" viewBox="25 25 50 50">
-          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-        </svg>
-      </div>
+    <div id="window">
+      <div id="loader">
+          <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+    </div>
   </app-root>
-  
+
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
     {{/each}}
@@ -210,6 +216,6 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-  
+
 </body>
 </html>

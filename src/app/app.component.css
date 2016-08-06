@@ -2,7 +2,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: rgb(242, 242, 242);
 }
+
 main{
   display: flex;
   flex: 1;
@@ -25,6 +27,8 @@ app-header-top{
 app-header-top a{
   color: #FFF;
   opacity: .5;
+  display: inline-block;
+  width: 32px;
 }
 app-header-top a:hover{
   opacity: 1;
@@ -39,4 +43,19 @@ app-footer-item a{
   text-decoration: none;
   color: #FFF;
 }
+
+/* Animation */
+
+:host{
+  animation: fade-in .5s ease-in forwards;
+}
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 
